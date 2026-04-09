@@ -1,0 +1,207 @@
+.page {
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Hero */
+.pageHero {
+  position: relative;
+  min-height: 55vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("https://picsum.photos/seed/lucknow-gate/1400/800") center/cover no-repeat;
+  text-align: center;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(140,20,20,0.88), rgba(26,10,10,0.82));
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  animation: fadeInUp 0.8s ease both;
+}
+
+.heroLabel {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #f4c842;
+}
+
+.heroTitle {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  margin: 0;
+  font-family: "Georgia", serif;
+}
+
+.heroSubtitle {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.85);
+  max-width: 520px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Search */
+.searchSection {
+  padding: 2.5rem 0;
+  background: #fff;
+  border-bottom: 1px solid #f0f0f0;
+  position: sticky;
+  top: 66px;
+  z-index: 100;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+/* Content */
+.contentSection {
+  padding: 3rem 0 5rem;
+  background: #fafafa;
+}
+
+.resultCount {
+  text-align: center;
+  color: #888;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+}
+
+.resultCount strong {
+  color: #c0392b;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1.5rem;
+}
+
+/* No results */
+.noResults {
+  text-align: center;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.noResultsIcon {
+  font-size: 3.5rem;
+}
+
+.noResults h3 {
+  font-size: 1.3rem;
+  color: #1a0a0a;
+  margin: 0;
+}
+
+.noResults p {
+  color: #888;
+  margin: 0;
+}
+
+.resetBtn {
+  background: #c0392b;
+  color: #fff;
+  border: none;
+  padding: 0.7rem 2rem;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background 0.2s ease;
+}
+
+.resetBtn:hover {
+  background: #a93226;
+}
+
+/* Tips */
+.tipsSection {
+  padding: 4rem 0 5rem;
+  background: #fff;
+}
+
+.tipsTitle {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #1a0a0a;
+  font-family: "Georgia", serif;
+  margin-bottom: 2rem;
+}
+
+.tipsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+.tipCard {
+  background: #fafafa;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid #f0f0f0;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.tipCard:hover {
+  border-color: #c0392b;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(192,57,43,0.08);
+}
+
+.tipIcon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.tipTitle {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1a0a0a;
+  margin: 0 0 0.5rem;
+}
+
+.tipInfo {
+  font-size: 0.83rem;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .searchSection {
+    top: 60px;
+  }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

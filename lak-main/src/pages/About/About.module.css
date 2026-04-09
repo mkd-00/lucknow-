@@ -1,0 +1,288 @@
+.about {
+  padding-top: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Page Hero */
+.pageHero {
+  position: relative;
+  min-height: 55vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("https://picsum.photos/seed/lucknow-arch/1400/800") center/cover no-repeat;
+  text-align: center;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(140,20,20,0.85), rgba(26,10,10,0.8));
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  animation: fadeInUp 0.8s ease both;
+}
+
+.heroLabel {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #f4c842;
+}
+
+.heroTitle {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  margin: 0;
+  font-family: "Georgia", serif;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+.heroSubtitle {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.85);
+  max-width: 520px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Section headers */
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.label {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #c0392b;
+  margin-bottom: 0.5rem;
+}
+
+.sectionTitle {
+  font-size: clamp(1.7rem, 3.5vw, 2.5rem);
+  font-weight: 800;
+  color: #1a0a0a;
+  margin: 0 0 1rem;
+  font-family: "Georgia", serif;
+}
+
+.sectionSubtitle {
+  color: #666;
+  font-size: 0.95rem;
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Intro section */
+.introSection {
+  padding: 6rem 0;
+  background: #fff;
+}
+
+.introGrid {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 4rem;
+  align-items: center;
+}
+
+.introText {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.introText p {
+  color: #555;
+  line-height: 1.8;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.introStats {
+  display: flex;
+  gap: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #f0f0f0;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.introStat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.introStat strong {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #999;
+}
+
+.introStat span {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1a0a0a;
+}
+
+.introImage {
+  position: relative;
+}
+
+.introImage img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+}
+
+.imageCaption {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #999;
+  margin-top: 0.75rem;
+  font-style: italic;
+}
+
+/* Culture section */
+.cultureSection {
+  padding: 6rem 0;
+  background: #fff;
+}
+
+.cultureGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.cultureCard {
+  display: flex;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  background: #fafafa;
+  border-radius: 12px;
+  border: 1px solid #f0f0f0;
+  transition: all 0.3s ease;
+  align-items: flex-start;
+}
+
+.cultureCard:hover {
+  background: #fff;
+  border-color: #c0392b;
+  box-shadow: 0 8px 30px rgba(192,57,43,0.08);
+  transform: translateY(-4px);
+}
+
+.cultureIcon {
+  font-size: 2.2rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.cultureContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.cultureTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1a0a0a;
+  margin: 0;
+}
+
+.cultureDesc {
+  font-size: 0.87rem;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Quote */
+.quoteSection {
+  background: linear-gradient(135deg, #8c1414, #1a0a0a);
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.quote {
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  color: rgba(255,255,255,0.85);
+  font-style: italic;
+  font-family: "Georgia", serif;
+  max-width: 680px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+.quoteAttr {
+  color: rgba(244,200,66,0.6);
+  font-size: 0.85rem;
+  margin: 1.5rem 0 0;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .introGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .introImage img {
+    height: 320px;
+  }
+  .timelineItem,
+  .timelineItem.right {
+    width: 100%;
+    left: 0;
+    padding: 0 0 0 2rem;
+    text-align: left;
+  }
+  .timelineItem.left {
+    padding-right: 0;
+    text-align: left;
+  }
+  .timelineLine {
+    left: 8px;
+  }
+  .timelineDot,
+  .timelineItem.left .timelineDot,
+  .timelineItem.right .timelineDot {
+    left: 0;
+    right: auto;
+    transform: translateX(-50%);
+  }
+  .timelineItem:hover .timelineDot,
+  .timelineItem.left:hover .timelineDot {
+    transform: translateX(-50%) scale(1.4);
+  }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

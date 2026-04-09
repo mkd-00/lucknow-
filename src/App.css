@@ -1,0 +1,36 @@
+/* ========================================
+   Global App Styles — Nawabi Lucknow
+   ======================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  /* No top padding — hero sections extend behind the transparent fixed navbar */
+}
+
+/* Smooth page transitions */
+.main-content > * {
+  animation: pageFadeIn 0.4s ease both;
+}
+
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
